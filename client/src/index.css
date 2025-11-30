@@ -1,0 +1,4 @@
+/* 這是引入 Tailwind 核心樣式的指令 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
