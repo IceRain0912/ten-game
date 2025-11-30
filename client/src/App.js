@@ -140,7 +140,7 @@ function App() {
   };
 
   const renderSymbol = (player, size = 'small') => {
-    const sizeClass = size === 'large' ? 'w-16 h-16' : 'w-6 h-6';
+    const sizeClass = size === 'large' ? 'w-20 h-20' : 'w-8 h-8';
     if (player === 'X') {
       return <X className={`${sizeClass} text-blue-500`} strokeWidth={3} />;
     } else if (player === 'O') {
@@ -161,7 +161,7 @@ function App() {
         onClick={() => handleCellClick(bigIndex, smallIndex)}
         disabled={!isActive || isBoardWon || player !== null || gameStatus !== 'PLAYING'}
         className={`
-          w-10 h-10 border border-gray-400 flex items-center justify-center
+          w-14 h-14 border border-gray-400 flex items-center justify-center
           transition-all duration-200
           ${!isBoardWon && isActive && !player && gameStatus === 'PLAYING' ? 'hover:bg-gray-100 cursor-pointer' : 'cursor-not-allowed'}
           ${isLastMove ? 'bg-yellow-100' : ''}
