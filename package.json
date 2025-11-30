@@ -1,0 +1,19 @@
+{
+  "name": "ten-game",
+  "version": "1.0.0",
+  "description": "Ten Game - Ultimate Tic Tac Toe",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "install-client": "cd client && npm install",
+    "build-client": "cd client && npm run build",
+    "heroku-postbuild": "npm run install-client && npm run build-client"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "ws": "^8.14.2"
+  }
+}
