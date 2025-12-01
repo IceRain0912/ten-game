@@ -181,12 +181,12 @@ function App() {
       <div
         key={bigIndex}
         className={`
-          relative border-4 border-gray-800 p-1
+          relative border-4 border-gray-800 p-1 w-fit
           ${isActive && !winner && gameStatus === 'PLAYING' ? 'ring-4 ring-green-400' : ''}
           ${winner ? 'bg-gray-100' : 'bg-white'}
         `}
       >
-        <div className="grid grid-cols-3 gap-0">
+        <div className="grid grid-cols-3 gap-0 w-fit">
           {Array(9).fill(null).map((_, smallIndex) => 
             renderSmallCell(bigIndex, smallIndex)
           )}
@@ -343,7 +343,7 @@ function App() {
       </div>
 
       {gameStatus === 'PLAYING' && (
-        <div className="grid grid-cols-3 gap-2 mb-6 bg-gray-800 p-2 rounded-lg shadow-2xl">
+        <div className="grid grid-cols-3 gap-2 mb-6 bg-gray-800 p-2 rounded-lg shadow-2xl w-fit mx-auto">
           {Array(9).fill(null).map((_, i) => renderBigBoard(i))}
         </div>
       )}
